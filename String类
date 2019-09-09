@@ -1,0 +1,88 @@
+package helloJava;
+
+public class StringOperations {
+
+	public static void main(String[] args) {
+		//创建字符串
+		String s1 = "hello";
+		String s2 = "world";
+		System.out.println(s1);//hello
+		System.out.println(s2);//world
+		//字符串的合并
+		String sh = s1 + s2;
+		String sh2 = s1 + " " + s2;
+		System.out.println(sh);//helloworld
+		System.out.println(sh2);//hello world
+		//连接其他数据类型,转化为String
+		int num = 5;
+		String sl = s1 + num;
+		System.out.println(sl);//hello5
+		//获取字符串信息
+		//获取字符串长度
+		int num2 = s1.length();
+		//字符串查找
+		int num3 = s1.indexOf("ll");
+		int num4 = s1.lastIndexOf("o");
+		System.out.println(num2);//5
+		System.out.println(num3);//2
+		System.out.println(num4);//4
+		//获取指定索引位置上的字符
+		char cha = s1.charAt(4);
+		System.out.println(cha);//o
+		//字符串操作
+		//获取子字符串
+		String sz = s1.substring(1,2);//开始位置结束位置
+		String sz2 = s1.substring(2);
+		System.out.println(sz);//e
+		System.out.println(sz2);//llo
+		//去除首尾部分的空格
+		String s3 = " hello world ";
+		String strim = s3.trim();
+		System.out.println(strim);//hello world
+		//字符串替换
+		String sreplace = s3.replace('l','L');
+		System.out.println(sreplace);// heLLo world
+		//判断字符串的开始和结尾
+		boolean p1 = s3.startsWith(" ");//双引号
+		boolean p2 = s3.endsWith("h");
+		//判断字符串是否相等
+		boolean p3 = s1.equals(s3);
+		boolean p4 = (s1 == s3);
+		boolean p5 = s3.equalsIgnoreCase(sreplace);
+		System.out.println("p1的值为"+p1);//1
+		System.out.println("p2的值为"+p2);//0
+		System.out.println("p3的值为"+p3);//0
+		System.out.println("p4的值为"+p4);//0
+		System.out.println("p5的值为"+p5);//1
+		//大小写转换
+		String sxx = s3.toLowerCase();
+		String sdx = s3.toUpperCase();
+		System.out.println(sxx);// hello world 
+		System.out.println(sdx);// HELLO WORLD 	
+
+	}
+
+}
+
+
+/*hello
+world
+helloworld
+hello world
+hello5
+5
+2
+4
+o
+e
+llo
+hello world
+ heLLo worLd 
+p1的值为true
+p2的值为false
+p3的值为false
+p4的值为false
+p5的值为true
+ hello world 
+ HELLO WORLD 
+*/
